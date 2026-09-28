@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preserving Spatial Structure in Foundation-Model-Based Multi-channel Speaker Diarization</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="assets/probe-data.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="assets/audio-examples.js"></script>
+    <script defer src="examples.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Preserving Spatial Structure in<br />Foundation-Model-Based Multi-channel Speaker Diarization</h1>
+      <img
+        class="architecture"
+        src="assets/SRA_FINAL3.svg"
+        alt="SRA architecture with spatial, acoustic, and fused representations."
+      />
+
+      <div class="controls">
+        <div class="control-group" role="group" aria-labelledby="model-label">
+          <span id="model-label">Model:</span>
+          <button type="button" data-model="ID8" aria-pressed="true">S-DiariZen</button>
+          <button type="button" data-model="ID8-SARR" aria-pressed="false">S-DiariZen-SRA</button>
+          <button type="button" data-model="compare" aria-pressed="false">Compare</button>
+        </div>
+        <div class="control-group" role="group" aria-labelledby="view-label">
+          <span id="view-label">View:</span>
+          <button type="button" data-view="perspective" aria-pressed="true">Perspective</button>
+          <button type="button" data-view="aligned" aria-pressed="false">Aligned bars</button>
+        </div>
+        <label><input id="uncertainty" type="checkbox" checked /> ± SEM</label>
+      </div>
+
+      <div class="legend">
+        <span><i class="shape spatial" aria-hidden="true"></i> S: Spatial</span>
+        <span><i class="shape acoustic" aria-hidden="true"></i> A: WavLM</span>
+        <span><i class="shape fused" aria-hidden="true"></i> F: Final fused</span>
+        <span id="legend-note">Normalized score ↑ (shared scale)</span>
+      </div>
+      <p id="compare-key" hidden>
+        <span><i class="comparison-swatch" aria-hidden="true"></i>Hollow bars: S-DiariZen</span>
+        <span><i class="comparison-swatch filled" aria-hidden="true"></i>Filled bars: S-DiariZen-SRA</span>
+      </p>
+      <div id="plots" class="plot-grid" aria-label="Probe scores by attribute"></div>
+      <noscript><p>Enable JavaScript to view the plots.</p></noscript>
+      <p class="sr-only" id="announcement" role="status" aria-live="polite"></p>
+
+      <p class="probe-summary">
+        Training S-DiariZen with SRA improves spatial decodability at the fusion
+        endpoint <strong>F</strong>, which feeds the powerset classifier. In the
+        examples below, improved spatial decodability at <strong>F</strong> is
+        accompanied by lower diarization error.
+      </p>
+
+      <section id="audio-examples" aria-labelledby="examples-title">
+        <h2 id="examples-title">Examples</h2>
+        <p class="example-meta">Tests on MVAD corpus with probing analysis.</p>
+        <div id="example-list"></div>
+      </section>
+    </main>
+    <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "protocol": "Existing F-probe OOF predictions, all three seeds; same 2-s local RTTM score. Fixed 16-s context beginning 6 s before each probe window, clipped to recording boundaries on a 0.5-s grid. Context endpoints are not optimized by DER. Exact RTTM activity is checked separately from the frame-sampled probe manifest.",
+  "tasks": {
+    "Azimuth": {
+      "total_probe_windows": 569,
+      "local_joint_improvements": 19,
+      "context_joint_improvements": 10,
+      "context_recordings": [
+        "mvad_One1",
+        "mvad_One3",
+        "mvad_One4",
+        "mvad_Two1",
+        "mvad_Two12",
+        "mvad_Two8"
+      ],
+      "new_recordings": [
+        "mvad_One1",
+        "mvad_One3",
+        "mvad_One4",
+        "mvad_Two12",
+        "mvad_Two8"
+      ]
+    },
+    "Distance": {
+      "total_probe_windows": 225,
+      "local_joint_improvements": 6,
+      "context_joint_improvements": 3,
+      "context_recordings": [
+        "mvad_One7",
+        "mvad_Two1"
+      ],
+      "new_recordings": [
+        "mvad_One7"
+      ]
+    }
+  },
+  "source_sha256": {
+    "data/processed/MVAD/official_all/recordings.tsv": "b1c63fb9a639dcabf9fcaa730940800b34b9baf2087549cacfe0ec391a94aa4e",
+    "data/processed/MVAD/official_all/rttm": "192d628f69b2b312522dc5f0370f96d3be09b37e831018c8dfa3a0e7d2a82617",
+    "data/processed/MVAD/official_all/spatial_frames.tsv": "b772f2b45940506163b1d3719d81867bbfd2e139b9a383c4177803b617f7f332",
+    "exp09_SARR/exp/id8_sarr_lam005_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_One1.rttm": "6fdfd7618a0a26f45f7bdb46787db680b3d747fd976410bb60b5992d50dd3d9a",
+    "exp09_SARR/exp/id8_sarr_lam005_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_One3.rttm": "6d7e7ac93f63cfc2f6f7e540c4864971af0dec86f64c66d755bd5268c998e83f",
+    "exp09_SARR/exp/id8_sarr_lam005_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_One4.rttm": "83df835985fd7a7f7c7affc4c86408aee965f7855ebf3dfb13d799eee1bfdebe",
+    "exp09_SARR/exp/id8_sarr_lam005_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_One6.rttm": "ec6acaa7ed0e1936838681a45e7aebf8a00453e1f14513479ca6aad0f3231dce",
+    "exp09_SARR/exp/id8_sarr_lam005_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_One7.rttm": "ea583c3c5b4b837a705110a2581363d685007b0c2ec28d692f69dfb751789027",
+    "exp09_SARR/exp/id8_sarr_lam005_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_Two1.rttm": "83b8a67db6c2453dc6170749a5de324b4ccaf7aeed2ebc65fae07f36c95a8fd9",
+    "exp09_SARR/exp/id8_sarr_lam005_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_Two12.rttm": "bb7790511e5887fc86bfa95c093a2e17a28c525f92aa5901bf142ed8fca33358",
+    "exp09_SARR/exp/id8_sarr_lam005_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_Two4.rttm": "7af40f7389fc1c349a556c9a4e362b6342dcbb0fb71f8e67e41b0efe73319c04",
+    "exp09_SARR/exp/id8_sarr_lam005_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_Two5.rttm": "12214d74841b1c1959fae0368ba482c6483e5aacc2a9060432115fa05a8ad2eb",
+    "exp09_SARR/exp/id8_sarr_lam005_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_Two8.rttm": "b5bb285124249ef385244a2bb6da57862b764e7227f92242b686841b34864bcc",
+    "exp17_final_prob/results/confidence_probe_oof_predictions.csv": "e6de8467e21b93f47423330c2ef2aede7324b8b54be763cc6150e9260a5d00b7",
+    "sra-diarization.github.io/assets/audio-examples.json": "f1cf37db3b7b798b1854198f8541f44d9f1849faf87c1eac53ee21405d5d53bd",
+    "sra-diarization.github.io/scripts/probe_example_audit/all_candidates.csv": "4bd9bd0af3fe998217003df5403d168720833bc683ccf74b646efb648272dedf",
+    "src/baselines/exp_papercheck_3ds_4mic_maxspacing_20260627/id8_diarizen_spatial_diarization_joint_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_One1.rttm": "92691761077ba3176d571359cb4cf489029a5e2535d3aa3706cdc87fa3f3c7cb",
+    "src/baselines/exp_papercheck_3ds_4mic_maxspacing_20260627/id8_diarizen_spatial_diarization_joint_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_One3.rttm": "e9c1efb3548bf6ff73bcfa058802080c773f026d081c51a8d30589c2f4470816",
+    "src/baselines/exp_papercheck_3ds_4mic_maxspacing_20260627/id8_diarizen_spatial_diarization_joint_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_One4.rttm": "3b6d0b128e2cb7773ceb14d11f249e593f58405e7530bc693033e2f6cb4e6b05",
+    "src/baselines/exp_papercheck_3ds_4mic_maxspacing_20260627/id8_diarizen_spatial_diarization_joint_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_One6.rttm": "36f9d94bf5b2837b65f1b872d4c273102515cec40343f3cd784d89d1fc30c2ed",
+    "src/baselines/exp_papercheck_3ds_4mic_maxspacing_20260627/id8_diarizen_spatial_diarization_joint_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_One7.rttm": "c0e0b8eba04a92039be10c13de9630d04fefe62b8d88592449d2d11c63a5fe12",
+    "src/baselines/exp_papercheck_3ds_4mic_maxspacing_20260627/id8_diarizen_spatial_diarization_joint_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_Two1.rttm": "15b614bb41f02584d22e8905ca425a3a08387072da6972c3d4131fd24b08f4a5",
+    "src/baselines/exp_papercheck_3ds_4mic_maxspacing_20260627/id8_diarizen_spatial_diarization_joint_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_Two12.rttm": "21c8bb659db51e12de7f735bd3a0bc9ba0c9b3995a183ac42220384c4faaf6d6",
+    "src/baselines/exp_papercheck_3ds_4mic_maxspacing_20260627/id8_diarizen_spatial_diarization_joint_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_Two4.rttm": "ee7960dbf83ad406e391534e1bb43f304f75f9888b011d79cbf321a5ee5f8af0",
+    "src/baselines/exp_papercheck_3ds_4mic_maxspacing_20260627/id8_diarizen_spatial_diarization_joint_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_Two5.rttm": "36a6ef5f59a680f7a1543f05f7c2d53006d8f2949a5e42d250670cd65e92be28",
+    "src/baselines/exp_papercheck_3ds_4mic_maxspacing_20260627/id8_diarizen_spatial_diarization_joint_3ds.slurm/oracle_stitch/metric_Loss_best/avg_ckpt5/test/MVAD/mvad_Two8.rttm": "6733c3e0ac2dd0efc0b36cc20a0f65e53f1652b690400c3dd306be5215dc1233"
+  }
+}
